@@ -21,6 +21,18 @@
     <pre id="game-of-life-canvas"></pre>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
     <script src="./bootstrap.js"></script>
-    <script type="module" src="index.js"></script>
+    <script type="module">
+      import { Universe } from "./pkg/wasm-game-of-life.js";
+
+        const pre = document.getElementById("game-of-life-canvas")
+        const universe = Universe.new(64, 64)
+        const renderLoop = () => {
+          pre.textContent = universe.render();
+          universe.tick()
+          requestAnimationFrame(renderLoop)
+        }
+
+        requestAnimationFrame(renderLoop)
+    </script>
   </body>
 </html>
