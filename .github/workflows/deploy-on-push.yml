@@ -16,7 +16,7 @@ jobs:
         run: wasm-pack build --target web
 
       - name: Copy library into www
-        run: cp -R pkg/ src/pkg
+        run: cp -R pkg/ www/pkg
 
       - name: Deploying Site
         env:
