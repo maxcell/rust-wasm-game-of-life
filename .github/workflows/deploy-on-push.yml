@@ -13,10 +13,10 @@ jobs:
       - uses: jetli/wasm-pack-action@v0.3.0
 
       - name: Run WASM Pack
-      - run: wasm-pack build --target web
+        run: wasm-pack build --target web
 
       - name: Copy library into www
-      - run: cp -R pkg/ src/pkg
+        run: cp -R pkg/ src/pkg
 
       - name: Deploying Site
         env:
