@@ -18,6 +18,9 @@ jobs:
       - name: Copy library into www
         run: cp -R pkg/ www/pkg
 
+      - name: Check out www contents
+        run: ls www/
+
       - name: Deploying Site
         env:
             NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
