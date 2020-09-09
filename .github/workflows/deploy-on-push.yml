@@ -19,7 +19,7 @@ jobs:
         run: cp -R pkg/ www/pkg
 
       - name: Check out www contents
-        run: ls www/
+        run: ls -l www/pkg
 
       - name: Deploying Site
         env:
