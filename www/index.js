@@ -1,4 +1,4 @@
-import { Universe } from "wasm-game-of-life";
+import { Universe } from "./pkg/wasm-game-of-life.js";
 
 const pre = document.getElementById("game-of-life-canvas")
 const universe = Universe.new(64, 64)
