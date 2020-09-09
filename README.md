@@ -6,13 +6,12 @@ as a canvas.
 
 ### How to Read this Repository
 
-Primarily the pieces of work that are being done are happening in `src/lib.rs` and `www/index.js`. Before you can
-use this project, you need to be sure to `cargo install` so you can have the correct dependencies. Before continuing, you must also have
-[wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) installed.
+Primarily the pieces of work that are being done are happening in `src/lib.rs` and `www/index.js`. 
+Before continuing, you must also have [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/) installed.
 
 Then in the directory, you can run `wasm-pack build` which should create a `pkg/`, this is how we are able to connect
-our own package to be consumed by the browser. From there you can move into the `www` directory (`cd www/`) and run
-`npm run start` and it should be running <http://localhost:8080>.
+our own package to be consumed by the browser. From there you can move into the `www` directory (`cd www/`),
+install the packages `npm install`and run `npm run start` and it should be running <http://localhost:8080>.
 
 ### Notes about errors caught on stream
 
