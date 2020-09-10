@@ -9,7 +9,6 @@ async function run() {
   const universe = Universe.new()
   const pre = document.getElementById("game-of-life-canvas")
   const renderLoop = () => {
-    console.log(universe)
     pre.textContent = universe.render();
     universe.tick()
     requestAnimationFrame(renderLoop)
