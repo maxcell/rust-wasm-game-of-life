@@ -93,8 +93,9 @@ impl Universe {
         self.cells = next;
     }
 
-    pub fn new(width: u32, height: u32) -> Universe {
-
+    pub fn new() -> Universe {
+        let width = 64;
+        let height = 64;
         let cells = (0..width * height)
             .map(|i| {
                 if i % 2 == 0 || i % 7 == 0 {
